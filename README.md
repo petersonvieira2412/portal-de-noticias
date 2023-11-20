@@ -1,4 +1,5 @@
 # portal-de-noticias
 Portal de notícias com NodeJS e MongoDB
 
-Com node instalado na máquina, execute o comando "node index.js" para iniciar o projeto
+• Instale as dependências do projeto com o comando "npm install"
+• Com node instalado na máquina, execute o comando "node index.js" para iniciar o projeto
