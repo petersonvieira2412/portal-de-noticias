@@ -63,7 +63,10 @@ app.get('/', async (req, res) => {
             res.render('home', { posts: mappedPosts, postsTop: mappedPostsTop })
         } else {
 
-            const postsBusca = await Posts.find({titulo: {$regex: req.query.busca, $options: 'i'}})
+            const postsBusca = await Posts.find({$or: [
+                { titulo: { $regex: req.query.busca, $options: 'i' } },
+                { descricao: { $regex: req.query.busca, $options: 'i' } }
+            ]})
 
             if (postsBusca != null){
                 console.log(postsBusca)
