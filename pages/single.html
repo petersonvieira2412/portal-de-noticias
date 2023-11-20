@@ -1,0 +1,29 @@
+<%- include('partials/header.html') %>
+
+<section class="noticia">
+    <div class="center">
+        <div class="noticia-single">
+            <h2><%= posts.titulo %></h2>
+            <div class="autor-nome">
+                <span><%= posts.categoria %></span>
+            </div>
+            <br>
+            <img src="<%= posts.img %>" alt="" style="width: 100%;">
+            <p><%= posts.descricao %></p>
+
+            <br><br>
+
+            <a href="/" class="voltar">Voltar</a>
+
+        </div>
+
+        <%- include('partials/mais-lidas.html') %>
+        
+    </div>
+</section>
+
+<%- include('partials/footer.html') %>
+
+</body>
+
+</html>
